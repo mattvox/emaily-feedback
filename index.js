@@ -7,8 +7,10 @@ const mongoose = require('mongoose')
 const passport = require('passport')
 const cookieSession = require('cookie-session')
 
-
-mongoose.connect(process.env.MONGO_URI)
+mongoose.Promise = global.Promise
+mongoose.connect(process.env.MONGO_URI, {
+  useMongoClient: true,
+})
 
 const app = express()
 
