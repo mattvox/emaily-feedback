@@ -10,8 +10,11 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "client": "node start-client.js",
-    "dev": "concurrently \"yarn server\" \"yarn client\""
+    "client-start": "node client-start.js",
+    "client-install": "node client-install.js",
+    "client-build": "node client-build.js",
+    "dev": "concurrently \"yarn server\" \"yarn client-start\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false yarn client-install && yarn client-build"
   },
   "author": "Matthew Bliffert",
   "license": "ISC",
