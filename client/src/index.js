@@ -11,7 +11,7 @@ import reducers from './reducers'
 import 'materialize-css/dist/css/materialize.min.css'
 import './css/index.css'
 
-import registerServiceWorker from './registerServiceWorker'
+// import registerServiceWorker from './registerServiceWorker'
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
@@ -27,4 +27,4 @@ render(
   , document.getElementById('root')
 )
 
-registerServiceWorker()
+// registerServiceWorker()
