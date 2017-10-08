@@ -11,6 +11,10 @@ import reducers from './reducers'
 import 'materialize-css/dist/css/materialize.min.css'
 import './css/index.css'
 
+// TEMPORARY CODE FOR DEV, REMOVE LATER!!!!!
+import axios from 'axios'
+window.axios = axios
+
 // import registerServiceWorker from './registerServiceWorker'
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
