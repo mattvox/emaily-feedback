@@ -15,28 +15,20 @@ class App extends Component {
 
   render() {
     return (
-      <div>
-        <BrowserRouter>
-          <div>
-            <Header />
-            <div className='container'>
-              <Switch>
-                <Route exact path='/' component={Landing} />
-                <Route exact path='/surveys' component={Dashboard} />
-                <Route exact path='/surveys/new' component={SurveyNew} />
-              </Switch>
-            </div>
+      <BrowserRouter>
+        <div>
+          <Header />
+          <div className='container'>
+            <Switch>
+              <Route exact path='/' component={Landing} />
+              <Route exact path='/surveys' component={Dashboard} />
+              <Route exact path='/surveys/new' component={SurveyNew} />
+            </Switch>
           </div>
-        </BrowserRouter>
-      </div>
+        </div>
+      </BrowserRouter>
     )
   }
 }
-
-// const mapStateToProps = state => {
-//   return {
-//
-//   }
-// }
 
 export default connect(null, actions)(App)
